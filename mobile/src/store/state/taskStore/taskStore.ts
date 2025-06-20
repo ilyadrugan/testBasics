@@ -33,61 +33,49 @@ class TaskStore {
       });
   }
   async getTasks() {
-    console.log('getTasks')
     this.isLoading = true;
     this.errorMessage = '';
     await getTasksApi()
       .then((result)=>{
-       console.log('result.data',result.data)
        this.tasks = result.data
       })
-      .catch((err)=>{
-        console.log('err',err)
+      .catch(()=>{
         this.errorMessage = 'Ошибка получения задач';
       })
       .finally(()=>{this.isLoading = false;});
   }
   async updateTaskApi(model: TaskModel) {
-    console.log('updateTaskApi')
     this.isLoading = true;
     this.errorMessage = '';
     await updateTasksApi(model._id, model)
       .then((result)=>{
        console.log('result.data',result.data)
-      //  this.tasks = result.data
       })
-      .catch((err)=>{
-        console.log('err',err)
+      .catch(()=>{
         this.errorMessage = 'Ошибка обновления задачи';
       })
       .finally(()=>{this.isLoading = false;});
   }
   async createTask(model: CreateTaskModel) {
-    console.log('createTask')
     this.isLoading = true;
     this.errorMessage = '';
     await createTaskApi(model)
       .then((result)=>{
        console.log('result.data',result.data)
-      //  this.tasks = result.data
       })
-      .catch((err)=>{
-        console.log('err',err)
+      .catch(()=>{
         this.errorMessage = 'Ошибка создания задачи';
       })
       .finally(()=>{this.isLoading = false;});
   }
   async deleteTask(id: string) {
-    console.log('delete')
     this.isLoading = true;
     this.errorMessage = '';
     await deleteTaskApi(id)
       .then((result)=>{
        console.log('result.data',result.data)
-      //  this.tasks = result.data
       })
-      .catch((err)=>{
-        console.log('err',err)
+      .catch(()=>{
         this.errorMessage = 'Ошибка удаления задачи';
       })
       .finally(()=>{this.isLoading = false;});

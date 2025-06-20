@@ -1,7 +1,7 @@
 import React, {  } from 'react';
 import { observer } from 'mobx-react-lite';
 import { useEffect, useState } from 'react';
-import { View, ActivityIndicator, StyleSheet, FlatList, RefreshControl, TouchableOpacity, Platform, UIManager, LayoutAnimation } from 'react-native';
+import { View, StyleSheet, FlatList, RefreshControl, TouchableOpacity, Platform, UIManager, LayoutAnimation } from 'react-native';
 import taskStore from '../../store/state/taskStore/taskStore';
 import { CustomText } from '../../components/text/customText';
 import gs from '../../styles/global';
@@ -16,7 +16,7 @@ export const Main = observer(() => {
     const [isModalVisible, setIsModalVisible] = useState(false);
     const [createModalVisible, setCreateModalVisible] = useState(false);
 
-    const [taskToEdit, setTaskToEdit] = useState<TaskModel>();
+    const [taskToEdit, setTaskToEdit] = useState<TaskModel>({_id: '', title: '', description: '', isCompleted: false, isImportant: false});
 
     const [refreshing, setRefreshing] = useState(false);
     useEffect(() => {
@@ -79,11 +79,7 @@ export const Main = observer(() => {
         </View>
         <FilterBar />
         </>}
-    //    ListFooterComponent={<>
-    //         <View style={gs.mt16} />
-    //         {taskStore.isLoading && <ActivityIndicator animating size={'large'} />}
-    //         <View style={{height: 140}} />
-    //    </>}
+       ListFooterComponent={<View style={{height: 140}} />}
        ListEmptyComponent={!taskStore.isLoading ? 
        <View style={styles.notFound}>
             <CustomText>Список задач пуст</CustomText>

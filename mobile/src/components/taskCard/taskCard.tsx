@@ -1,5 +1,5 @@
 import React, { FC, useRef } from 'react';
-import { View, Text, StyleSheet, TouchableOpacity, Switch, Animated } from 'react-native';
+import { View, StyleSheet, TouchableOpacity, Switch, Animated } from 'react-native';
 import { CardContainer } from '../card/cardContainer';
 import { TaskModel } from '../../store/state/taskStore/models/models';
 import { CustomText } from '../text/customText';
