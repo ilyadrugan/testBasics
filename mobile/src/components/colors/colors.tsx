@@ -1,0 +1,47 @@
+export default {
+    BLACK_COLOR: '#000000',
+    WHITE_COLOR: '#FFFFFF',
+    WHITE_DIRTY_COLOR: '#EFFAF3',
+    SECONDARY_COLOR: '#53545D',
+    GRAY_COLOR: '#919191',
+    GRAY_COLOR2: '#AEAEAE',
+    GRAY_COLOR3: '#9E9E9E',
+    GRAY_COLOR4: '#EBEDEC',
+    GRAY_COLOR5: '#7B7B7B',
+    GRAY_COLOR_ICON: '#868686',
+    OLIVE_COLOR: '#C3E154',
+    GREEN_COLOR: '#54B676',
+    GREEN_LIGHT_COLOR: '#5CC280',
+    GREEN_LIGHT_LIGHT_GREEN: '#F2FFF7',
+    BORDER_COLOR: '#E1E1E1',
+    BORDER_COLOR2: '#D0D0D0',
+    BORDER_COLOR3: '#D7D7D7',
+    LIGHT_BORDER_COLOR:'rgba(255, 255, 255, 0.25)',
+    PLACEHOLDER_COLOR: '#373737',
+    ORANGE_COLOR: '#FFAC44',
+    BACKGROUND_COLOR: '#F3F3F3',
+    BLUE_COLOR: '#EFFCF4',
+    OCEAN_COLOR: '#3498db',
+    BLUE_LIGHT_COLOR: '#DDEEFF',
+    PINK_COLOR: '#FE99C4',
+    RED_COLOR: '#fd0b0b',
+};
+
+export const lightTheme = {
+  textColor: '#000000',
+  placeholdertextColor: '#333333',
+  backgroundColor: '#f1f1f1',
+  cardColor: '#ffffff',
+  buttonColor: '#007AFF',
+  borderColor: '#E1E1E1',
+};
+
+export const darkTheme = {
+  textColor: '#FFFFFF',
+  placeholdertextColor: '#c9c9c9',
+  backgroundColor: '#1b1b1b',
+  backgroundColorLight: '#1b1b1b',
+  cardColor: '#424242',
+  buttonColor: '#0A84FF',
+  borderColor: '#b8b8b8',
+};
